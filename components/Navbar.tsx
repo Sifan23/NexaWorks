@@ -13,11 +13,11 @@ import {
 
 const Navbar = () => {
   return (
-    <nav className="w-full p-4 flex items-center justify-between">
+    <nav className="p-4 flex items-center justify-between">
       {/* left */}
       collapsebutton
       {/* Right */}
-      <div className="">
+      <div className="flex items-center gap-4">
         <Link href="/">Dashboard</Link>
         <Moon />
 
