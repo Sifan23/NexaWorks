@@ -9,7 +9,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="w-full max-w-full">
-      <div className="w-full">
+      <div className="w-full pt-4 pb-4">
         <Welcome />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-4">
