@@ -36,7 +36,7 @@ const newsBlogsData = [
     title: "Celebrating Our Employee of the Month",
     badge: "Culture & Wellbeing",
     image:
-      "https://images.pexels.com/photos/3184431/pexels-photo-3184431.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=800",
     description:
       "This month, we’re shining a spotlight on Sarah Davis, whose outstanding contributions have uplifted our team’s spirit and productivity. Her innovative ideas and positive attitude make her a true asset to our company culture. Learn more about her journey and impact in this feature!",
     author: "Lisa Patel",
