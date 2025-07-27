@@ -1,4 +1,7 @@
-NexaWorks: A Modern Office Intranet
+**NexaWorks: A Modern Office Intranet**
+
+<img width="1356" height="627" alt="Screenshot 2025-07-27 210404" src="https://github.com/user-attachments/assets/c826fe69-1796-4f0c-a0b5-3ca1130cd984" />
+
 
 Welcome to NexaWorks, a sleek and user-friendly office intranet we built to make work life easier and more connected! Whether you’re in the office or working remotely, NexaWorks is your hub for team updates, task management, and company resources. We created this for the Frontend Challenge: Office Edition by Axero using Next.js, Tailwind CSS, ShadCN/UI, TypeScript, and Lucide React for icons. It’s clean, responsive, and packed with features to keep employees in the loop.
 Features
