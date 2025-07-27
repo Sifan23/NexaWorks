@@ -11,10 +11,6 @@ import EssentialResources from "@/components/sections/EssentialResources";
 export default function Home() {
   return (
     <>
-      <main>
-        <TeamSpotlight />
-        <EssentialResources />
-      </main>
       <div className="w-full max-w-full">
         <div className="w-full pt-4 pb-4">
           <Welcome />
@@ -26,17 +22,21 @@ export default function Home() {
           <div className="bg-primary-foreground p-4 rounded-lg col-span-1 lg:col-span-3">
             <UpcomingEvents />
           </div>
-          <div className="bg-primary-foreground p-4 rounded-lg">
+          {/* <div className="bg-primary-foreground p-4 rounded-lg">
             <CardList title="Latest Transaction" />
-          </div>
-          <div className="bg-primary-foreground p-4 rounded-lg">
+          </div> */}
+          {/* <div className="bg-primary-foreground p-4 rounded-lg">
             <ToDoList />
-          </div>
-          <div className="bg-primary-foreground p-4 rounded-lg">
+          </div> */}
+          {/* <div className="bg-primary-foreground p-4 rounded-lg">
             <CardList title="Popular Content" />
-          </div>
+          </div> */}
         </div>
       </div>
+      <main>
+        <TeamSpotlight />
+        <EssentialResources />
+      </main>
     </>
   );
 }
