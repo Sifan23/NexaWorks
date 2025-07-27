@@ -56,30 +56,32 @@ const UpcomingEvents = () => {
       <ScrollArea className="max-h-[400px] overflow-y-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {eventsData.map((item) => (
-            <Card key={item.id} className="flex flex-nowrap p-4">
-              <div className="w-12 h-12 rounded-full relative overflow-hidden mr-4 flex-shrink-0">
-                <Image
-                  src={item.avatar}
-                  alt={item.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="flex flex-col">
-                <h2 className="text-md font-semibold mb-2">{item.title}</h2>
-                <div className="flex items-center gap-2 mb-2">
-                  <Calendar className="w-4 h-4 text-muted-foreground" />
-                  <span className="text-sm text-muted-foreground">
-                    {item.time}
-                  </span>
+            <Card key={item.id} className="p-4">
+              <div className="flex">
+                <div className="w-12 h-12 rounded-full relative overflow-hidden mr-4 flex-shrink-0">
+                  <Image
+                    src={item.avatar}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <div className="flex items-center gap-2 mb-2">
-                  <MapPin className="w-4 h-4 text-muted-foreground" />
-                  <span className="text-sm text-muted-foreground">
-                    {item.location}
-                  </span>
+                <div className="flex flex-col">
+                  <h2 className="text-md font-semibold mb-2">{item.title}</h2>
+                  <div className="flex items-center gap-2 mb-2">
+                    <Calendar className="w-4 h-4 text-muted-foreground" />
+                    <span className="text-sm text-muted-foreground">
+                      {item.time}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <MapPin className="w-4 h-4 text-muted-foreground" />
+                    <span className="text-sm text-muted-foreground">
+                      {item.location}
+                    </span>
+                  </div>
+                  <Badge variant="secondary">{item.badge}</Badge>
                 </div>
-                <Badge variant="secondary">{item.badge}</Badge>
               </div>
             </Card>
           ))}
