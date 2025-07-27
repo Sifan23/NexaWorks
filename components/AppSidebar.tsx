@@ -39,6 +39,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
 import Image from "next/image";
+import { Avatar, AvatarFallback } from "./ui/avatar";
 
 const items = [
   {
@@ -113,7 +114,13 @@ const AppSidebar = () => {
                     </Link>
                   </SidebarMenuButton>
                   {item.title === "Inbox" && (
-                    <SidebarMenuBadge>5</SidebarMenuBadge>
+                    <SidebarMenuBadge>
+                      <Avatar className="h-5 w-5 ml-2">
+                        <AvatarFallback className="bg-blue-500 text-white text-xs font-medium">
+                          5
+                        </AvatarFallback>
+                      </Avatar>
+                    </SidebarMenuBadge>
                   )}
                 </SidebarMenuItem>
               ))}
