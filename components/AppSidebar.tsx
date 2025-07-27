@@ -7,6 +7,10 @@ import {
   Settings,
   User2,
   ChevronUp,
+  Megaphone,
+  Users,
+  Headphones,
+  MessageCircleQuestionMark,
   Plus,
   Projector,
   ChevronDown,
@@ -48,19 +52,34 @@ const items = [
     icon: Inbox,
   },
   {
-    title: "Calendar",
+    title: "Company News",
+    url: "#",
+    icon: Megaphone,
+  },
+  {
+    title: "Events Calendar",
     url: "#",
     icon: Calendar,
   },
   {
-    title: "Search",
+    title: "Team Directory",
     url: "#",
-    icon: Search,
+    icon: Users,
+  },
+  {
+    title: "IT Support",
+    url: "#",
+    icon: Headphones,
   },
   {
     title: "Settings",
     url: "#",
     icon: Settings,
+  },
+  {
+    title: "Help Center",
+    url: "#",
+    icon: MessageCircleQuestionMark,
   },
 ];
 
@@ -87,7 +106,7 @@ const AppSidebar = () => {
       <SidebarSeparator />
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          {/* <SidebarGroupLabel>Application</SidebarGroupLabel> */}
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
