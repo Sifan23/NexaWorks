@@ -114,6 +114,7 @@ const ToDoList = () => {
                   id={todo.id}
                   checked={todo.checked}
                   onCheckedChange={() => toggleTodo(todo.id)}
+                  className="data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600"
                 />
                 <label htmlFor={todo.id} className="text-sm  flex-1">
                   {todo.title}
