@@ -15,7 +15,7 @@ const Welcome = () => {
             <Sparkles size={25} />
           </div>
           <div className="flex flex-col pl-2 gap-2 mb-2">
-            <h1 className="text-3xl font-bold">Welcome back, Jane Doe!</h1>
+            <h1 className="text-3xl font-bold">Welcome back, John Doe!</h1>
             <p className="text-sm text-muted-foreground ">
               Stay updated with the latest from NexaWorks
             </p>
