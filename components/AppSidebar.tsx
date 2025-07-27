@@ -91,13 +91,8 @@ const AppSidebar = () => {
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
               <Link href="/">
-                <Image
-                  src={"https://github.com/shadcn.png"}
-                  alt="logo"
-                  width={20}
-                  height={20}
-                />
-                <span>NexaWorks</span>
+                <Image src="/logo.png" alt="logo" width={130} height={130} />
+                {/* <span>NexaWorks</span> */}
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
