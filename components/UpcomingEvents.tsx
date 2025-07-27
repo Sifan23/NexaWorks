@@ -58,9 +58,14 @@ const eventsData = [
 const UpcomingEvents = () => {
   return (
     <div className="bg-primary-foreground p-4 rounded-lg">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-lg font-medium">Upcoming Events & Training</h1>
-        <Button variant="outline" className="text-sm text-blue-600/80">
+      <div className="flex justify-between items-center gap-2 mb-6">
+        <h1 className="text-sm sm:text-lg font-medium">
+          Upcoming Events & Training
+        </h1>
+        <Button
+          variant="outline"
+          className="text-xs sm:text-sm text-blue-600/80 px-1.5 py-0.5 sm:px-4 sm:py-2"
+        >
           View Full Calendar
         </Button>
       </div>
