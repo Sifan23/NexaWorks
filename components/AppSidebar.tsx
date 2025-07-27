@@ -1,19 +1,16 @@
+"use client";
 import React from "react";
 import {
   Home,
   Inbox,
   Calendar,
-  Search,
   Settings,
   User2,
   ChevronUp,
   Megaphone,
   Users,
   Headphones,
-  MessageCircleQuestionMark,
-  Plus,
-  Projector,
-  ChevronDown,
+  MessageCircleQuestion,
 } from "lucide-react";
 import {
   Sidebar,
@@ -21,14 +18,12 @@ import {
   SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
-  SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarSeparator,
-} from "./ui/sidebar";
+} from "@/components/ui/sidebar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -37,9 +32,10 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import Link from "next/link";
 import Image from "next/image";
-import { Avatar, AvatarFallback } from "./ui/avatar";
+import { usePathname } from "next/navigation";
 
 const items = [
   {
@@ -49,42 +45,44 @@ const items = [
   },
   {
     title: "Inbox",
-    url: "#",
+    url: "/inbox",
     icon: Inbox,
   },
   {
     title: "Company News",
-    url: "#",
+    url: "/news",
     icon: Megaphone,
   },
   {
     title: "Events Calendar",
-    url: "#",
+    url: "/events",
     icon: Calendar,
   },
   {
     title: "Team Directory",
-    url: "#",
+    url: "/team",
     icon: Users,
   },
   {
     title: "IT Support",
-    url: "#",
+    url: "/support",
     icon: Headphones,
   },
   {
     title: "Settings",
-    url: "#",
+    url: "/settings",
     icon: Settings,
   },
   {
     title: "Help Center",
-    url: "#",
-    icon: MessageCircleQuestionMark,
+    url: "/help",
+    icon: MessageCircleQuestion,
   },
 ];
 
 const AppSidebar = () => {
+  const pathname = usePathname();
+
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader className="py-4">
@@ -93,7 +91,6 @@ const AppSidebar = () => {
             <SidebarMenuButton asChild>
               <Link href="/">
                 <Image src="/logo.png" alt="logo" width={130} height={130} />
-                {/* <span>NexaWorks</span> */}
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -102,25 +99,29 @@ const AppSidebar = () => {
       <SidebarSeparator />
       <SidebarContent>
         <SidebarGroup>
-          {/* <SidebarGroupLabel>Application</SidebarGroupLabel> */}
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
+                <SidebarMenuItem key={item.title} className="flex items-center">
+                  <SidebarMenuButton
+                    asChild
+                    className={
+                      pathname === item.url
+                        ? "bg-blue-500 text-white"
+                        : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                    }
+                  >
                     <Link href={item.url}>
-                      <item.icon />
+                      <item.icon className="w-5 h-5" />
                       <span>{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
                   {item.title === "Inbox" && (
-                    <SidebarMenuBadge>
-                      <Avatar className="h-5 w-5 ml-2">
-                        <AvatarFallback className="bg-blue-500 text-white text-xs font-medium">
-                          5
-                        </AvatarFallback>
-                      </Avatar>
-                    </SidebarMenuBadge>
+                    <Avatar className="h-5 w-5 ml-2">
+                      <AvatarFallback className="bg-blue-500 text-white text-xs font-medium">
+                        5
+                      </AvatarFallback>
+                    </Avatar>
                   )}
                 </SidebarMenuItem>
               ))}
@@ -134,10 +135,13 @@ const AppSidebar = () => {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <SidebarMenuButton>
-                  <User2 /> John Doe <ChevronUp className="ml-auto" />
+                  <User2 className="w-5 h-5" /> John Doe
+                  <ChevronUp className="ml-auto" />
                 </SidebarMenuButton>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
+                <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                <DropdownMenuSeparator />
                 <DropdownMenuItem>Account</DropdownMenuItem>
                 <DropdownMenuItem>Setting</DropdownMenuItem>
                 <DropdownMenuItem>Sign out</DropdownMenuItem>
