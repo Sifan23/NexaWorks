@@ -1,10 +1,14 @@
+"use client";
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles } from "lucide-react";
+import { useTheme } from "next-themes";
 
 const Welcome = () => {
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
   return (
-    <Card className="w-full bg-blue-100 p-1 rounded-lg">
+    <Card className={`w-full ${isDark ? "" : "bg-blue-100"} p-1 rounded-lg`}>
       <CardContent className="flex flex-col justify-center p-6">
         <div className="flex ">
           <div className="text-blue-500 pt-4">
